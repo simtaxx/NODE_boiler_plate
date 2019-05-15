@@ -10,6 +10,12 @@ Définition du CRUD
 */
 // Create Item: POST
 router.post("/article", (req, res) => {
+  /*
+    Pour créer un article il faut une valeur pour :
+    - title
+    - content
+  */
+
   res.json({ msg: "Create Article" });
 });
 
@@ -25,6 +31,12 @@ router.get("/article/:id", (req, res) => {
 
 // Update one Item: PUT
 router.put("/article/:id", (req, res) => {
+  /*
+    Pour éditer un article il faut une valeur pour :
+    - title
+    - content
+  */
+
   res.json({ msg: "Update one Article" });
 });
 
