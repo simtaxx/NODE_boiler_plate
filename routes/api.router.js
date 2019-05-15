@@ -5,18 +5,32 @@ const express = require("express");
 const router = express.Router();
 //
 
+/* 
+Configure MySQL
+*/
+const mysql = require("mysql");
+const connexion = mysql.createConnection({
+  host: "localhost",
+  user: "root",
+  password: "root",
+  port: 8889,
+  database: "node-boiler-plate"
+});
+connexion.connect();
+//
+
 /*
 Définition du CRUD
 */
 // Create Item: POST
 router.post("/article", (req, res) => {
-  /*
-    Pour créer un article il faut une valeur pour :
-    - title
-    - content
-  */
+  /* 
+        Pour créer un article il faut une valeur pour :
+        - title
+        - content
+    */
 
-  res.json({ msg: "Create Article" });
+  res.json({ msg: "Create Article", data: req.body });
 });
 
 // Read all Items: GET
@@ -31,11 +45,11 @@ router.get("/article/:id", (req, res) => {
 
 // Update one Item: PUT
 router.put("/article/:id", (req, res) => {
-  /*
-    Pour éditer un article il faut une valeur pour :
-    - title
-    - content
-  */
+  /* 
+        Pour éditer un article il faut une valeur pour :
+        - title
+        - content
+    */
 
   res.json({ msg: "Update one Article" });
 });
