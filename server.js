@@ -8,6 +8,8 @@ const path = require("path");
 
 // Inner
 const frontRouter = require("./routes/front.router");
+const apiRouter = require("./routes/api.router");
+
 //
 
 /*
@@ -25,6 +27,7 @@ server.set("views", __dirname + "/www");
 server.use(express.static(path.join(__dirname, "www")));
 
 // Utilisation des routers
+server.use("/api", apiRouter);
 server.use("/", frontRouter);
 //
 
