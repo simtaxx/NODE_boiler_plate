@@ -1,0 +1,21 @@
+{
+  "name": "node_boiler_plate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simtaxx/NODE_boiler_plate.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/simtaxx/NODE_boiler_plate/issues"
+  },
+  "homepage": "https://github.com/simtaxx/NODE_boiler_plate#readme"
+}
